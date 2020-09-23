@@ -4,8 +4,7 @@
 # The opinions are mainly short texts which state the qualities of an ideal prime minister according to the respective people.
 
 # Methodology
-The steps involved in finding the significant qualities from the given dataset are as
-follows:
+The steps involved in finding the significant qualities from the given dataset are as follows: \\
 	1. We form the temporary vocabulary of the dataset by considering only the nouns and adjectives from the text. We ignore the other words since the objective is to find the qualities of the prime minister. We then find the frequency of each term in the temporary vocabulary and arrange the terms in order of decreasing frequency.
 	2. We find the synsets with respect to nouns and adjective only, for each word using Wordnet and store them in a list. We then find the derivationally related forms of each synset and then find the synsets of those forms and store them in another list. Finally, we add these two lists and form the main vocabulary containing the synsets of both the original terms and the derivationally related forms.
 	3. Next, we find similar terms from the main vocabulary by using Wu-Palmer’s Similarity and merge those terms to form a cluster, for which the similarity score is greater than a given threshold value (= 0.9).
